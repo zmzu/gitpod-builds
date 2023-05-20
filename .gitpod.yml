@@ -9,6 +9,5 @@ tasks:
       git config --global credential.helper store
       echo "https://rahifm:$PASSWORD@github.com" > ~/.git-credentials
     command: | 
-      time git clone --depth 1 --single-branch https://github.com/RahifM/android_kernel_xiaomi_sdm845 -b staging/arter97-r11/gccw beryllium
-      cd beryllium
+      time git clone --depth 1 --single-branch https://github.com/RahifM/android_kernel_xiaomi_sdm845 -b staging/arter97-r11/gccw beryllium && cd cd beryllium
       time bash build_master.sh
