@@ -1,7 +1,7 @@
 tasks:
   - name: Kermel
     init: |
-      sudo apt install bc fakeroot mkbootimg p7zip-full zipalign cpio -y
+      sudo apt install bc fakeroot mkbootimg p7zip-full zipalign cpio pigz -y
       bash $HOME/scripts/misc.sh || { git clone https://github.com/RahifM/scripts $HOME/scripts && bash $HOME/scripts/misc.sh; }
     command: | 
       git clone --depth 1 --single-branch https://github.com/RahifM/android_kernel_xiaomi_sdm845 -b staging/arter97-r11/gccw beryllium
