@@ -3,3 +3,4 @@ tasks:
     init: |
       sudo apt install bc fakeroot mkbootimg p7zip-full zipalign cpio -y
       bash $HOME/scripts/misc.sh || { git clone https://github.com/RahifM/scripts $HOME/scripts && bash $HOME/scripts/misc.sh; }
+    command: echo "done!"
