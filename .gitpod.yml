@@ -3,7 +3,12 @@ tasks:
     init: |
       time sudo apt install bc fakeroot mkbootimg p7zip-full zipalign cpio pigz -y
       time bash $HOME/scripts/misc.sh || { git clone https://github.com/RahifM/scripts $HOME/scripts && bash $HOME/scripts/misc.sh; }
+      git config --global user.name "rahifm"
+      git config --global user.email "rahifmanjatha372@gmail.com
+      git config --global core.editor vim
+      git config --global credential.helper store
+      echo "https://rahifm:$password@github.com" > ~/.git-credentials
     command: | 
       time git clone --depth 1 --single-branch https://github.com/RahifM/android_kernel_xiaomi_sdm845 -b staging/arter97-r11/gccw beryllium
       cd beryllium
-      time bash build_master.sh
+      #time bash build_master.sh
